@@ -1,0 +1,34 @@
+{
+  "name": "genpark-intelligent-log-anomaly-root-cause-detector-skill",
+  "version": "1.0.0",
+  "description": "GenPark AI Agent Skill - Intelligent system log anomaly & root cause detector.",
+  "author": "genpark",
+  "category": "operations",
+  "tags": [
+    "log-anomaly",
+    "root-cause",
+    "sre-agent",
+    "system-observability"
+  ],
+  "inputs": {
+    "log_stream": {
+      "type": "array"
+    },
+    "window_seconds": {
+      "type": "integer"
+    }
+  },
+  "outputs": {
+    "anomaly_detected": {
+      "type": "boolean"
+    },
+    "root_cause_explanation": {
+      "type": "string"
+    },
+    "affected_service": {
+      "type": "string"
+    }
+  },
+  "entrypoint": "client.py",
+  "example": "example_usage.py"
+}
